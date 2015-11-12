@@ -1,73 +1,71 @@
- %%%%%%
-% Harshit Rohatgi - curriculum vitae
-% Edited using vim
-% Uses LaTeX and moderncv
-%%%%%%
+%% start of file `main.tex'.
+%% Copyright 2014 Francois Mouton (moutonf@gmail.com).
+%
+% This template is adapted from the work performed by Xavier Danaux (xdanaux@gmail.com).
+% This template further extends the functionality by integrating the moderntimeline package.
+% This template also includes custom Biblatex style to print bibliography items with the moderntimeline package.
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
 
 
+\documentclass[11pt,a4paper,sans]{moderncv/moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
+% moderncv themes
+\moderncvstyle{classic}                             % Only the 'classic' style is fully functional with the modifications made. The other options, 'casual' (default), 'oldstyle' and 'banking' has minor typesetting problems with the current modifications.
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 
-\documentclass[11pt,a4paper]{moderncv}
-\moderncvtheme[blue]{classic}
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 
+% adjust the page margins
+\usepackage[scale=0.85]{geometry}
 
+\usepackage{pdfpages/pdfpages}
 
+\newcommand{\cvreferencecolumn}[2]{%
+  \cvitem[0.75em]{}{%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+    }%
+}
 
-\usepackage[utf8]{inputenc} % character encoding
-\usepackage[scale=0.8]{geometry} % adjust the page margins
+\newcommand{\cvreference}[8]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{\href{mailto:#6}{\nolinkurl{#6}}}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7\newline}
+    \ifthenelse{\equal{#8}{}}{}{\mobilephonesymbol~#8}}
 
-
-
-
-\AtBeginDocument{\setlength{\maketitlenamewidth}{10cm}}
-\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
-
-
-
-
-% personal data
-\firstname{Harshit}
-\familyname{Rohatgi}
-\title{Curriculum Vitae}
-\address{102B, Solitaire Apartments, Kondapur}{Hyderabad, India}
-\phone{+91-8008484420}
-\email{harsh.rohatgi@gmail.com}
-% \photo[64pt]{picture}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file;
-
-
-
-
-% --------------------------------------
-% CONTENT
-% --------------------------------------
-
-
-
+%-------------------Personal Data for CV title-----------------------------------------------------------
+% Example:
+\name{Harshit}{Rohatgi}
+\phone[mobile]{+1~(206)~618~1154}
+\email{harsh.rohatgi@gmail.com}    
+\social[linkedin]{harshit-rohatgi-64882117}
+\social[github]{tallandroid}
+\extrainfo{http://stackexchange.com/users/373309/tallandroid}
 
 \begin{document}
-\maketitle
 
+%-------------------Resume------------------------------------------------------------------------------
 
+\makecvtitle
 
+%-------------------Education Section-------------------------------------------------------------------
 
 \section{Education}
-\cventry{2006 - 2010}{Computer Science and Engineering}{Vellore Institute of Technology, Vellore}{}{\textit{8.87/10}}{}
+
+
+\cventry{2005 - 06}{Class 12$^{\textbf{th}}$}{AISSE}{}{\textit{88.0\%}}{}
 \cventry{2005 - 06}{Class 12$^{\textbf{th}}$}{AISSE}{}{\textit{88.0\%}}{}
 \cventry{2003 - 04}{Class 10$^{\textbf{th}}$}{AISSCE}{}{\textit{91.6\%}}{}
-
-
-
-
-\section{Computer skills}
-\cvcomputer{\textbf{Programming Languages:}}{C++, Python, Java}{\textbf{Others:}}{HTML, Javascript, \LaTeX{},XSLT}
-\cvcomputer{\textbf{Operating System}}{Linux, Windows}{\textbf{Analytics:}}{Cognos Report Studio 8.4, Business Objects,Xcelsius}
-\cvcomputer{\textbf{Database:}}{MySQL}{\textbf{Softwares:}}{Photoshop, GIMP}
-
-
-
-
-
-
 
 
 % --------------------------------------
@@ -75,14 +73,13 @@
 % --------------------------------------
 
 
-
-
 \section{Work Experience and Positions}
 
+\cventry{Apr 2015 - current}{Amazon Web Services}{Software Developer Engineer-II}{}{}{Working as a core team member of Service Catalog Console. }
 
+\cventry{Mar 2014 - Apr 2015}{Amazon Webstore}{Software Developer Engineer-II}{}{}{Architected the new Site Designing platform and laid the initial design for theme designing and the interaction of the same with seller tools.}
 
-
-\cventry{Sep 2011 -- To date}{Amazon India Private Ltd.}{Software Developer Engineer-I}{}{}{Working as a SDE-I for Webstore team, Amazon.}
+\cventry{Sep 2011 -- Mar 2014}{Amazon Webstore}{Software Developer Engineer-I}{}{}{Contributed to various aspects of seller side for webstore product. Worked as a full stack engineer working on the inventory platform and the registration pipeline. }
 
 
 
@@ -95,104 +92,15 @@
 \cventry{June 2009 -- July 2009}{Prologix Software Solutions Ltd.}{Intern}{}{}{Worked as a developer in the firm as a part of Summer Internship.} 
 
 
+%----------------------------------
+% SKILLS
+%----------------------------------
+\section{Skills}
 
+\subsection{Development}
+\cvdoubleitem {\textbf{Programming Languages:}}{Java, Javascript, Python}{\textbf{Others:}}{HTML, Ruby, C++, \LaTeX{},XSLT}
 
-% --------------------------------------
-% CURRENT POSITION
-% --------------------------------------
-
-
- \section{Current Position}
- \cvlistitem{\textbf{AutoCategorization}
- \\AutoCategorization is an Amazon wide initiative to autocategorize the ASINs so that sellers have a less error prone way to list their items on their marketplace . Implemented that for Webstore use cases using an ontology based classifier.
- \newline
- }
-
- \cvlistitem{\textbf{EDM Nudge Framework}
- \\Inspired by Webstore-1.0 Nudge Framework, this allows the product team to configure nudges to be shown to whitelisted Seller by an S3 update on different Webstore Catalog Manager's pages. 
- \newline
- }
-
- \cvlistitem{\textbf{Seller Tools UI framework}
-  Part of the core team for designing and devising the Seller Tools UI framework . The vision of this project is to design a unified framework which is compliant with all Webstore Seller Tools on a common rendering framework.
-  \newline
- }
-
- \cvlistitem{\textbf{Seamless Account Pools}
- \\Allows sellers to register with both the account pools and switch them at mayhem .
-  \newline
- }
- 
- \cvlistitem {\textbf{Seller Configurable Terms and Conditions}
- \\Allows seller to configure the policy acceptance from a Self Service Tool.
- \newline
- }
-
-
- \cvlistitem {\textbf{1099K}
- \\Setup tax restrictions and blocking placing order in preview mode and preventing sellers to launch their store.
-  \newline
- }
- }
-
-
-
-
-% --------------------------------------
-% PROJECTS
-% --------------------------------------
-
-
-
-
-\section{Projects}
-
-\cvlistitem
-{\textbf{Naad}
-\newline
-{\small{\textbf{Technical Environment:}}{Facebook Graph,Django,YUI,YQL}}
-  \\Implemented in Yahoo India Open Hack-2013. It was a representation of songs your friends have listened to on a world map with the basic idea that the best music recommendations are stil from what your friends have listened to.\\
-}
-
-
-\cvlistitem
-{\textbf{Integrating Google Maps with Cognos}
-\newline
-{\small{\textbf{Technical Environment:}}{Javascript,Cognos}}
-  \\Integrated Google Maps with Cognos Report Studio 8.4 and enabled location based reporting using Google Maps API. The POC for the same was accepted in IM Center of Excellence\\
-}
-
-
-
-
-\cvlistitem
-{\textbf{D.A.Mn.D} -- {Driver Alertness Monitoring Device}
-\newline
-{\small{\textbf{Technical Environment:}}{C++}}
-  \\Develop a probabilistic model for drowsy detection using AECS and PERCLOS and using Bayesian Belief Networks. Also simulate driver detection by capturing feeds from camera or video.\\
-}
-
-
-
-
-\cvlistitem
-{\textbf{INGEN} -- {Intelligent Graphics Engine}
-\newline
-{\small{\textbf{Technical Environment:}}{C++, Python}}
-  \\Its an attempt to learn the basics of Artificial Intelligence algorithms and Natural Language Processing with their integration with a Graphics Engine. User input will be done by Natural Language to manipulate the agent which interacts with the Graphics Engine environment. Behaviour of Non-Player Characters will be guided by Artificial Intelligence.\\
-}
-
-
-
-
-\cvlistitem
-{\textbf{OBELISK} -- {VoiceXML Interpreter}
-\newline
-{\small{\textbf{Technical Environment:}}{C++}}
-  \\Done as a summer internship project at {\href{http://www.prologixsoft.com/obelisk.htm}{Prologix Software Solutions}}. The basic idea was to port the code on RHEL, add the implementations of new tags  added to VoiceXML 2.0. The second phase involved testing of project against w3c conformance test suite and fixes them.\\
-}
-
-
+\cvdoubleitem {\textbf{Javascript Frameworks:}} {AngularJS}{\textbf{Database:}}{DynamoDB}
 
 
 % --------------------------------------
@@ -200,14 +108,11 @@
 % --------------------------------------
 
 
-
-
 \section{Activities}
-
 
 \cvlistitem
 {Organizer - Sellers Hack Day-2013, Amazon
-  \\Part of the sellers hack day 2013 steering committee. Helped in ramping up the teams on the theme of the hack day(Machine learning) and mentored the teams on that
+  \\Part of the sellers hack day 2013 steering committee. Helped in ramping up the teams on the theme of the hack day(Machine learning) and mentored the teams.
 }
 
 \cvlistitem
@@ -215,59 +120,24 @@
   \\Participated in the overnight hack event in Amazon
 }
 
-
-
-
+\cvlistitem
+{Participant - Yahoo Open Hack- 2011, 2012
+  \\Active participant in yahoo open hacks. 
+}
 \cvlistitem
 {Member - Technical Committee, LUG@VIT
   \\Core committee member of Linux User's Group at VIT, Vellore
 }
 
 
-
-
-\cvlistitem
-{Event co-ordinator ,Phreak ’08
-  \\Event coordinator for the School of Computing Science’s annual technical fest (Phreak)
-}
-
-
-
-
-\cvlistitem
-{ Participant , workshop on Linux Device Driver}
-
-
-
-
-\cvlistitem
-{ Participant, workshop by TIFAC CORE
-  \\Participated in a two day workshop organised by TIFAC-Core on Vision Based Safety and Security System
-}
-
-
-
-
-
-
-
-
 % --------------------------------------
 % INTERESTS HOBBIES
 % --------------------------------------
 
-
-
-
 \section{Interests and Hobbies}
-
-
-
 
 \cvlistitem{Hobbyist photographer -- http://flickr.com/tallandroid}
 
-
-
-
-% --------------------------------------
 \end{document}
+
+%% end of file `main.tex'.
