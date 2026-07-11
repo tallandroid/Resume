@@ -1,150 +1,103 @@
-%% start of file `main.tex'.
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
+\documentclass[11pt,a4paper]{article}
 
+\usepackage[margin=0.7in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{microtype}
 
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.2em, itemsep=2pt, topsep=3pt}
 
-% moderncv themes
-\usepackage{moderncvstyleclassic}                           % Only the 'classic' style is fully functional with the modifications made. The other options, 'casual' (default), 'oldstyle' and 'banking' has minor typesetting problems with the current modifications.
-\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\titleformat{\section}
+  {\large\bfseries}
+  {}
+  {0em}
+  {}
+  [\titlerule]
 
-% character encoding
-\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\titlespacing*{\section}{0pt}{10pt}{5pt}
 
-% adjust the page margins
-\usepackage[scale=0.85]{geometry}
-
-\usepackage{pdfpages/pdfpages}
-
-\newcommand{\cvreferencecolumn}[2]{%
-  \cvitem[0.75em]{}{%
-    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
-    \hfill%
-    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
-    }%
+\newcommand{\resumeRole}[4]{
+  \textbf{#1} \hfill #2\\
+  \textit{#3} \hfill \textit{#4}
 }
-
-\newcommand{\cvreference}[8]{%
-    \textbf{#1}\newline% Name
-    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
-    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
-    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
-    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
-    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{\href{mailto:#6}{\nolinkurl{#6}}}\newline}%
-    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7\newline}
-    \ifthenelse{\equal{#8}{}}{}{\mobilephonesymbol~#8}}
-
-%-------------------Personal Data for CV title-----------------------------------------------------------
-% Example:
-\name{Harshit}{Rohatgi}
-\phone[mobile]{+91~(829)~612~8181}
-\email{harsh.rohatgi@gmail.com}    
-\social[linkedin]{harshit-rohatgi-64882117}
-\social[github]{tallandroid}
 
 \begin{document}
 
-%-------------------Resume------------------------------------------------------------------------------
+\begin{center}
+    {\LARGE \textbf{Harshit Rohatgi}}\\[4pt]
+    Bengaluru, India \\
+    +91 829 612 8181 \;|\;
+    \href{mailto:harsh.rohatgi@gmail.com}{harsh.rohatgi@gmail.com} \;|\;
+    \href{https://www.linkedin.com/in/harshit-rohatgi-64882117}{LinkedIn} \;|\;
+    \href{https://github.com/tallandroid}{GitHub}
+\end{center}
 
-\makecvtitle
-Tenured AI and software engineer with 15+ years of experience, and technical leader with a proven track record of architecting and delivering highly scalable, business-critical distributed systems across cloud platforms and e-commerce. Expert in tackling ambiguous problem spaces and driving long-term technical strategy, recently pioneering advancements in type systems.Actively exploring and implementing ML strategies to solve complex engineering challenges and drive product innovation.
+\section{Professional Summary}
 
-%----------------------------------
-% SKILLS
-%----------------------------------
-\section{Skills}
+Principal software engineer and technical leader with 15+ years of experience architecting and delivering highly scalable, business-critical distributed systems across enterprise software, cloud platforms, e-commerce, and AI-enabled products. Experienced in solving ambiguous technical problems, defining long-term architecture, leading cross-functional execution, and mentoring engineering teams. Recent work focuses on enterprise AI agents, semantic data access, federated query systems, natural-language-to-SQL, type systems, and machine-learning-driven engineering workflows.
 
-\cvdoubleitem {\textbf{Programming Languages:}}{Java, Typescript, Python, C++}{\textbf{Cloud Platforms:}}{AWS}
-\cvdoubleitem {\textbf{Machine Learning Frameworks}:} {Pytorch, Scikit-Learn, Tensorflow, Azure AutoML}{\textbf{Leadership Skills:}} {Mentorship, Project Management}
-\cvdoubleitem {\textbf{AI Methodologies}:}{Large Language Models(LLMs), Retrieval Augment Generation(RAG)}{{}}{}
+\section{Core Skills}
 
-% --------------------------------------
-% WORK EX
-% --------------------------------------
+\textbf{Programming Languages:} Java, TypeScript, Python, C++\\
+\textbf{Cloud and Distributed Systems:} AWS, Microservices, Distributed Systems, Federated Architectures, Low-Latency Systems\\
+\textbf{AI and Machine Learning:} Large Language Models, Retrieval-Augmented Generation, Natural-Language-to-SQL, LangGraph, PyTorch, TensorFlow, scikit-learn, Azure AutoML\\
+\textbf{Data and Platform Engineering:} Data Fabric, Federated Query Engines, Semantic Models, Entity Relationships, Query Planning, Telemetry, Reliability Engineering\\
+\textbf{Leadership:} Technical Strategy, Architecture Reviews, Cross-Functional Leadership, Mentorship, Project Execution
 
-\section{Work Experience and Positions}
-\cventry{Sep2021-Current}{Microsoft.com}{Lead Software Development Engineer}{}{}{Bengaluru}
-\cvlistitem{Spearheaded the architecture and delivery of a mission-critical Formula Remediation Engine, automating the resolution of Excel formula incompatibilities. This strategic initiative unblocked a key business deliverable, impacting 12k tenants and 2.3 million files monthly, leading a team of 8 engineers to successful execution}
-\cvlistitem{Leading a team of 5 members to improve the reliability of Excel Online product with a focus to bring parity between Excel Online and Excel Desktop under Excel Calc}
-\cvlistitem{Pioneered the application of GenAI workflows to optimize the validation of complex, high-dimensional features within Excel Formulas. Drove innovation by developing a novel test case generation system grounded by the Excel Calc engine, leading to improving the remediation accuracy to 99.9\% for the feature.}
-\cvlistitem{Moderating Design Review Panel as an effort to improve design review process in Excel IDC organization}
+\section{Professional Experience}
 
-\cventry{Feb 2020 - Aug 2021}{Amazon.com}{Senior Software Development Engineer}{}{}
-{Bengaluru}
-\cvlistitem{Worked as a lead developer for Amazon Sellers organization with a focus on verification for sellers on various Amazon and AWS storefronts.}
-\cvlistitem{Led the development of platform to support Business Process Management over AWS Step Functions.}
-\cvlistitem{Part of the Samurai group providing design consultations for the upcoming project with focus on self-contained web components, data-intensive applications and best practices for building services on AWS.}
+\resumeRole{UiPath}{Sep 2025--Present}{Principal Software Engineer}{Bengaluru}
+\begin{itemize}
+    \item Architected and delivered the integration of UiPath Data Fabric with the Agents Unified Runtime, enabling enterprise AI agents to discover, read, and update governed business entities through a unified tool interface. Drove implementation across the platform SDK, LangGraph-based agent runtime, and agent orchestration framework.
+    \item Defined the architecture for exposing federated enterprise data as a native agent capability, allowing agents to query systems of record without data replication or movement. Led cross-team integration that achieved 72\% end-to-end natural-language-to-SQL execution accuracy at a 2-second P95 inference latency.
+    \item Established semantic and type-system foundations for reliable agent interactions with enterprise data, including entity relationships, choice sets, and read/write operation contracts.
+    \item Shaped the technical strategy for agentic data access by addressing schema grounding, entity grain, query planning, telemetry, and production-readiness challenges across Data Fabric, agent platform, and federated query teams.
+    \item Defined performance, reliability, and quality metrics for agent-generated queries and enterprise data operations, improving observability and operational readiness for production deployments.
+\end{itemize}
 
-\cventry{Apr 2015 - Feb 2020}{Amazon Web Services}{Software Development Engineer - II}{}{}
-{Seattle}
-\cvlistitem{Worked as one of the core developers for AWS Marketplace team with projects spanning across the entire pipeline.}
-\cvlistitem{Contributed to rendering platform for the website stack with focus on federated architecture and tooling to support it for the teams.}
-\cvlistitem{Bootstrapped the Experimentation Platform for AWS with AWS Marketplace being the first customer. Implemented the service responsible for vending recognition token based on the request identifiers with focus on low latency architecture(10ms at p95).}
-\cvlistitem{Led the development of Container support for AWS Marketplace as a part of AWS Re:Invent-2018 launch. Further, worked on tooling support for onboarding AWS Services on AWS Marketplace Platform to build their marketplaces using the platform capabilities.}
+\resumeRole{Microsoft}{Sep 2021--Aug 2025}{Lead Software Development Engineer}{Bengaluru}
+\begin{itemize}
+    \item Architected and delivered a mission-critical Formula Remediation Engine that automated the resolution of Excel formula incompatibilities, unblocking a strategic business deliverable affecting 12,000 tenants and 2.3 million files per month.
+    \item Led a team of eight engineers through architecture, implementation, validation, and production rollout of the remediation platform.
+    \item Led a five-member engineering team focused on improving Excel Online reliability and reducing behavioral gaps between Excel Online and Excel Desktop within the Excel calculation stack.
+    \item Pioneered a generative AI workflow for validating complex, high-dimensional Excel formula features. Developed a test-case generation system grounded in the Excel calculation engine, increasing remediation accuracy to 99.9\%.
+    \item Moderated the Excel India Development Center Design Review Panel and helped improve architectural review quality, consistency, and engineering standards.
+\end{itemize}
 
-\cventry{Sep 2011 - Apr 2015}{Amazon Webstore}{Software Developer Engineer}{}{}{Hyderabad}
-\cvlistitem{Worked on the tooling chain for seller space in Amazon Webstore.}
-\cvlistitem{Architected the new Site Designing platform using independently operable web components and laid the initial design for theme designing and the interaction of the same with seller tools.}
-\cvlistitem{Worked on AutoCategorization for sellers listing in the inventory management tool. Project had a focus on distributed systems with multiple integrations. Addressed the existing pain points of Reliability and Maintainability by developing tooling to give insights into integration points using distributed tracing framework.}
+\resumeRole{Amazon}{Feb 2020--Aug 2021}{Senior Software Development Engineer}{Bengaluru}
+\begin{itemize}
+    \item Served as lead developer in the Amazon Sellers organization, building seller-verification capabilities across Amazon and AWS storefronts.
+    \item Led development of a business process management platform built on AWS Step Functions.
+    \item Participated in the Samurai architecture group, providing design consultation on self-contained web components, data-intensive applications, and AWS service-development practices.
+\end{itemize}
 
-\cventry{June 2010 -- Sep 2011}{Deloitte India Consulting Pvt. Ltd.}{Business Technology Analyst}{}{}{Hyderabad}
-\cvlistitem{Worked as an Analyst in Information Management Service Line of Deloitte Consulting. Developed Proof of Concepts for data visualization using Google Maps API.}
+\resumeRole{Amazon Web Services}{Apr 2015--Feb 2020}{Software Development Engineer II}{Seattle}
+\begin{itemize}
+    \item Served as a core engineer for AWS Marketplace across multiple layers of the platform and transaction pipeline.
+    \item Contributed to the AWS Marketplace web rendering platform, with emphasis on federated frontend architecture and developer tooling for product teams.
+    \item Bootstrapped an experimentation platform for AWS, with AWS Marketplace as the first customer. Implemented a low-latency service for vending recognition tokens from request identifiers, achieving 10 ms P95 latency.
+    \item Led development of container-product support for AWS Marketplace for the AWS re:Invent 2018 launch.
+    \item Built tooling that enabled AWS services to onboard to the AWS Marketplace platform and create service-specific marketplaces using shared platform capabilities.
+\end{itemize}
 
-\cventry{June 2009 -- July 2009}{Prologix Software Solutions Ltd.}{Intern}{}{}{Worked as a developer in the firm as a part of Summer Internship.} 
+\resumeRole{Amazon Webstore}{Sep 2011--Apr 2015}{Software Development Engineer}{Hyderabad}
+\begin{itemize}
+    \item Developed seller-facing tooling for the Amazon Webstore platform.
+    \item Architected a new site-design platform using independently deployable web components and defined the initial architecture for theme design and seller-tool integration.
+    \item Developed an auto-categorization system for seller inventory with multiple distributed integrations.
+    \item Improved reliability and maintainability by building distributed tracing tools that exposed failures and performance issues across integration points.
+\end{itemize}
 
-%-------------------Education Section-------------------------------------------------------------------
-
-\section{Education}
-\cventry{2022-2025(expected completion)}{Masters in Computer Science}{University of Texas, Austin}{}{}{}
-\cvlistitem{Courses taken: Optimization, Machine Learning, Natural Language Processing, Reinforcement Learning, Deep Learning}
-\cvlistitem{Projects: Predicting Weighted Average Price for Market Makers using Time Series Forecasting Methods}
-
-\cventry{2006 - 10}{Bachelor of Technology }{Computer Science and Engineering}{Vellore Institute of Technology, India}{\textit{8.87/10}}{}
-\cventry{2005 - 06}{Class 12$^{\textbf{th}}$}{AISSE}{}{\textit{88.0\%}}{}
-\cventry{2003 - 04}{Class 10$^{\textbf{th}}$}{AISSCE}{}{\textit{91.6\%}}{}
-
-% --------------------------------------
-% TALKS ETC.
-% --------------------------------------
-
-\section{Activities and Presentations}
-
-{\textbf{Consultant - GenAI workflows}
-  \\ \cvlistitem{Provided strategic GenAI consulting to startup 'Auxi,' guiding their pivot from traditional rule engines to AI-driven solutions for COGS optimization. Advised on technical architecture and implementation strategies.
-}
-
-{\textbf{Presentation - Developing services on Native AWS : An introduction}
-  \\{\cvlistitem{Introduced developers to new tooling and paradigms for developing microservices on Native AWS.}
-}
-
-% --------------------------------------
-% INTERESTS HOBBIES
-% --------------------------------------
-
-\section{Interests and Hobbies}
-\cvlistitem{Angel Investor}
-\cvlistitem{Endurance cyclist -- Randonneur}
+\resumeRole{Deloitte India Consulting Pvt. Ltd.}{Jun 2010--Sep 2011}{Business Technology Analyst}{Hyderabad}
+\begin{itemize}
+    \item Worked in Deloitte Consulting's Information Management service line and developed data-visualization proof of concepts using the Google Maps API.
+\end{itemize}
 
 \end{document}
-
-%% end of file `main.tex'.
-
-    © 2021 GitHub, Inc.
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
-Loading complete
