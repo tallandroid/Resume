@@ -1,6 +1,6 @@
 \documentclass[11pt,a4paper]{article}
 
-\usepackage[margin=0.7in]{geometry}
+\usepackage[margin=0.65in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -12,7 +12,7 @@
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlist[itemize]{leftmargin=1.2em, itemsep=2pt, topsep=3pt}
+\setlist[itemize]{leftmargin=1.15em, itemsep=1pt, topsep=2pt, parsep=0pt, partopsep=0pt}
 
 \titleformat{\section}
   {\large\bfseries}
@@ -21,7 +21,7 @@
   {}
   [\titlerule]
 
-\titlespacing*{\section}{0pt}{10pt}{5pt}
+\titlespacing*{\section}{0pt}{7pt}{3pt}
 
 \newcommand{\resumeRole}[4]{
   \textbf{#1} \hfill #2\\
@@ -35,69 +35,76 @@
     Bengaluru, India \\
     +91 829 612 8181 \;|\;
     \href{mailto:harsh.rohatgi@gmail.com}{harsh.rohatgi@gmail.com} \;|\;
-    \href{https://www.linkedin.com/in/harshit-rohatgi-64882117}{LinkedIn} \;|\;
-    \href{https://github.com/tallandroid}{GitHub}
+    \href{https://www.linkedin.com/in/harshit-rohatgi-64882117}{linkedin.com/in/harshit-rohatgi-64882117} \;|\;
+    \href{https://github.com/tallandroid}{github.com/tallandroid}
 \end{center}
 
 \section{Professional Summary}
 
-Principal software engineer and technical leader with 15+ years of experience architecting and delivering highly scalable, business-critical distributed systems across enterprise software, cloud platforms, e-commerce, and AI-enabled products. Experienced in solving ambiguous technical problems, defining long-term architecture, leading cross-functional execution, and mentoring engineering teams. Recent work focuses on enterprise AI agents, semantic data access, federated query systems, natural-language-to-SQL, type systems, and machine-learning-driven engineering workflows.
+Principal software engineer and technical leader with 15+ years of experience building scalable distributed systems across enterprise software, cloud platforms, e-commerce, and AI products. Expertise in enterprise AI agents, semantic data access, federated query systems, natural-language-to-SQL, technical strategy, and cross-functional execution.
 
 \section{Core Skills}
 
-\textbf{Programming Languages:} Java, TypeScript, Python, C++\\
-\textbf{Cloud and Distributed Systems:} AWS, Microservices, Distributed Systems, Federated Architectures, Low-Latency Systems\\
-\textbf{AI and Machine Learning:} Large Language Models, Retrieval-Augmented Generation, Natural-Language-to-SQL, LangGraph, PyTorch, TensorFlow, scikit-learn, Azure AutoML\\
-\textbf{Data and Platform Engineering:} Data Fabric, Federated Query Engines, Semantic Models, Entity Relationships, Query Planning, Telemetry, Reliability Engineering\\
-\textbf{Leadership:} Technical Strategy, Architecture Reviews, Cross-Functional Leadership, Mentorship, Project Execution
+\textbf{Languages:} Java, TypeScript, Python, C++ \quad
+\textbf{Cloud/Systems:} AWS, Microservices, Distributed Systems, Low-Latency Systems\\
+\textbf{AI/Data:} LLMs, RAG, NL-to-SQL, LangGraph, PyTorch, TensorFlow, scikit-learn, Data Fabric, Federated Query Engines, Semantic Models\\
+\textbf{Leadership:} Technical Strategy, Architecture Reviews, Cross-Functional Leadership, Mentorship
 
 \section{Professional Experience}
 
 \resumeRole{UiPath}{Sep 2025--Present}{Principal Software Engineer}{Bengaluru}
 \begin{itemize}
-    \item Architected and delivered the integration of UiPath Data Fabric with the Agents Unified Runtime, enabling enterprise AI agents to discover, read, and update governed business entities through a unified tool interface. Drove implementation across the platform SDK, LangGraph-based agent runtime, and agent orchestration framework.
-    \item Defined the architecture for exposing federated enterprise data as a native agent capability, allowing agents to query systems of record without data replication or movement. Led cross-team integration that achieved 72\% end-to-end natural-language-to-SQL execution accuracy at a 2-second P95 inference latency.
-    \item Established semantic and type-system foundations for reliable agent interactions with enterprise data, including entity relationships, choice sets, and read/write operation contracts.
-    \item Shaped the technical strategy for agentic data access by addressing schema grounding, entity grain, query planning, telemetry, and production-readiness challenges across Data Fabric, agent platform, and federated query teams.
-    \item Defined performance, reliability, and quality metrics for agent-generated queries and enterprise data operations, improving observability and operational readiness for production deployments.
+    \item Architected and delivered UiPath Data Fabric integration with the Agents Unified Runtime, enabling enterprise AI agents to discover, read, and update governed business entities across the platform SDK, LangGraph runtime, and orchestration framework.
+    \item Defined federated enterprise data access as a native agent capability without data replication, achieving 72\% end-to-end NL-to-SQL execution accuracy at 2-second P95 inference latency.
+    \item Established semantic contracts for entity relationships, choice sets, and read/write operations; shaped strategy for schema grounding, entity grain, query planning, telemetry, and production readiness across multiple teams.
 \end{itemize}
 
 \resumeRole{Microsoft}{Sep 2021--Aug 2025}{Lead Software Development Engineer}{Bengaluru}
 \begin{itemize}
-    \item Architected and delivered a mission-critical Formula Remediation Engine that automated the resolution of Excel formula incompatibilities, unblocking a strategic business deliverable affecting 12,000 tenants and 2.3 million files per month.
-    \item Led a team of eight engineers through architecture, implementation, validation, and production rollout of the remediation platform.
-    \item Led a five-member engineering team focused on improving Excel Online reliability and reducing behavioral gaps between Excel Online and Excel Desktop within the Excel calculation stack.
-    \item Pioneered a generative AI workflow for validating complex, high-dimensional Excel formula features. Developed a test-case generation system grounded in the Excel calculation engine, increasing remediation accuracy to 99.9\%.
-    \item Moderated the Excel India Development Center Design Review Panel and helped improve architectural review quality, consistency, and engineering standards.
+    \item Architected and delivered an Excel Formula Remediation Engine affecting 12,000 tenants and 2.3 million files monthly; led eight engineers through implementation and production rollout.
+    \item Led a five-member team improving Excel Online reliability and parity with Excel Desktop within the calculation stack.
+    \item Built a GenAI-based test-generation workflow grounded in the Excel calculation engine, raising remediation accuracy to 99.9\%; also moderated the Excel IDC Design Review Panel.
 \end{itemize}
 
 \resumeRole{Amazon}{Feb 2020--Aug 2021}{Senior Software Development Engineer}{Bengaluru}
 \begin{itemize}
-    \item Served as lead developer in the Amazon Sellers organization, building seller-verification capabilities across Amazon and AWS storefronts.
-    \item Led development of a business process management platform built on AWS Step Functions.
-    \item Participated in the Samurai architecture group, providing design consultation on self-contained web components, data-intensive applications, and AWS service-development practices.
+    \item Led seller-verification capabilities across Amazon and AWS storefronts and developed a business process management platform on AWS Step Functions.
+    \item Provided architecture guidance through the Samurai group on web components, data-intensive applications, and AWS service-development practices.
 \end{itemize}
 
 \resumeRole{Amazon Web Services}{Apr 2015--Feb 2020}{Software Development Engineer II}{Seattle}
 \begin{itemize}
-    \item Served as a core engineer for AWS Marketplace across multiple layers of the platform and transaction pipeline.
-    \item Contributed to the AWS Marketplace web rendering platform, with emphasis on federated frontend architecture and developer tooling for product teams.
-    \item Bootstrapped an experimentation platform for AWS, with AWS Marketplace as the first customer. Implemented a low-latency service for vending recognition tokens from request identifiers, achieving 10 ms P95 latency.
-    \item Led development of container-product support for AWS Marketplace for the AWS re:Invent 2018 launch.
-    \item Built tooling that enabled AWS services to onboard to the AWS Marketplace platform and create service-specific marketplaces using shared platform capabilities.
+    \item Core engineer for AWS Marketplace across the platform pipeline, including federated frontend architecture and developer tooling.
+    \item Bootstrapped an experimentation platform and implemented a recognition-token service at 10 ms P95 latency.
+    \item Led container-product support for the AWS re:Invent 2018 launch and built tooling for AWS service onboarding to Marketplace.
 \end{itemize}
 
 \resumeRole{Amazon Webstore}{Sep 2011--Apr 2015}{Software Development Engineer}{Hyderabad}
 \begin{itemize}
-    \item Developed seller-facing tooling for the Amazon Webstore platform.
-    \item Architected a new site-design platform using independently deployable web components and defined the initial architecture for theme design and seller-tool integration.
-    \item Developed an auto-categorization system for seller inventory with multiple distributed integrations.
-    \item Improved reliability and maintainability by building distributed tracing tools that exposed failures and performance issues across integration points.
+    \item Architected a site-design platform using independently deployable web components and defined theme-design integration with seller tools.
+    \item Built seller inventory auto-categorization and distributed tracing tooling to improve reliability across integration points.
 \end{itemize}
 
 \resumeRole{Deloitte India Consulting Pvt. Ltd.}{Jun 2010--Sep 2011}{Business Technology Analyst}{Hyderabad}
 \begin{itemize}
-    \item Worked in Deloitte Consulting's Information Management service line and developed data-visualization proof of concepts using the Google Maps API.
+    \item Developed information-management and data-visualization proofs of concept using the Google Maps API.
 \end{itemize}
+
+\section{Education}
+
+\resumeRole{University of Texas at Austin}{2022--2025}{Master of Science in Computer Science}{}
+Relevant coursework: Optimization, Machine Learning, NLP, Reinforcement Learning, and Deep Learning. Project: time-series forecasting of weighted average prices for market makers.
+
+\resumeRole{Vellore Institute of Technology}{2006--2010}{Bachelor of Technology in Computer Science and Engineering}{India}
+CGPA: 8.87/10.
+
+\section{Additional Experience}
+
+\textbf{Generative AI Consultant, Auxi:} Advised the startup on moving from rule engines to GenAI workflows for COGS optimization, including architecture and implementation strategy.\\\\
+\textbf{Speaker, UiPath DevCon 2026, Bengaluru:} Presented \textit{Agents Integration with Data Fabric}, covering how enterprise AI agents use governed business entities for reliable read and write operations.\\\\
+\textbf{Speaker: Developing Services on Native AWS:} Presented tooling, architecture patterns, and practices for building microservices on AWS.
+
+\section{Interests}
+Angel investing; endurance cycling and randonneuring.
 
 \end{document}
